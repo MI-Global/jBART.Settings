@@ -22,5 +22,5 @@ set RepoExtra=%RepoExtra:~0,-1%
 
 del /Q /F %HomeDir%\_temp\repo.*.conf
 
-java -jar jbart2a.jar recompile -romsdir _input -autodeodex -outputdir _output -workingdir _temp -romtype miui_v4 -timezone Europe/Moscow -locale ru_RU -repomain "%RepoMain%" -repopatch "%RepoPatch%" -repoextra "%RepoExtra%"
+java -jar jbart2a.jar recompile -romsdir _input -autodeodex -outputdir _output -workingdir _temp -romtype miui_v6 -timezone Europe/Moscow -locale en_US -repomain "%RepoMain%" -repopatch "%RepoPatch%" -repoextra "%RepoExtra%"
 
