@@ -1,4 +1,4 @@
-rem @echo off
+@echo off
 set HomeDir=%CD%\..
 set Stock=%CD%\..\_stock
 set Miui=%CD%\..\_input_miui
