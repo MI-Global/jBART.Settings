@@ -1,0 +1,13 @@
+# NXT patches
+
+# Common patches
+include "%patches_dir%/../../repositories/patches/main/nxt/T9.ptch";
+include "%patches_dir%/../../repositories/patches/main/nxt/MiuiFramework.ptch";
+include "%patches_dir%/../../repositories/patches/main/nxt/ThemeManager.ptch";
+include "%patches_dir%/../../repositories/patches/main/nxt/Mms.ptch";
+include "%patches_dir%/../../repositories/patches/main/nxt/InCallUI.ptch";
+
+# Patches for device lcsh92_wet_jb9 (all phones with MTK6592)
+include "%patches_dir%/../../repositories/patches/device/lcsh92_wet_jb9/nxt/Services.ptch";
+include "%patches_dir%/../../repositories/patches/device/lcsh92_wet_jb9/nxt/Settings.ptch";
+include "%patches_dir%/../../repositories/patches/device/lcsh92_wet_jb9/nxt/Android.policy.ptch";
