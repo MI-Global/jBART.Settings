@@ -1,16 +1,10 @@
-rem @echo off
+@echo off
 cd %~dp0
 chcp 1251
 if (%1)==() (
 	echo Need an img file to proceed...
 		goto end
 )
-set OutDir=%2
-if (%2)==() (
-set OutDir=%~N1
-)
-
-
 setlocal enabledelayedexpansion
 COLOR 0A
 mode con:cols=128 lines=50
@@ -27,7 +21,7 @@ echo Boot_Recovery_Repack by michfood Jan 2015
 echo  STD_unpack.bat v4
 echo.
 
-if exist %OutDir% rd /s /q %OutDir% >nul
+if exist %~N1 rd /s /q %~N1 >nul
 
 set /A N=0
 :loop
@@ -51,11 +45,11 @@ FOR /F %%G IN (bin\off2.txt) DO (
 FOR %%i IN (%1) DO ( set /A boot_size=%%~Zi )
 
 set /A real_ofs=%ofs2%+4
-md %OutDir%
+md %~N1
 echo.
 set /A ps=%ofs1%+4
 echo - pagesize        - %ps%
-echo %ps%>%OutDir%\pagesize.txt
+echo %ps%>%~N1\pagesize.txt
 echo - size of image   - %boot_size% byte
 echo - ram_disk offset - %real_ofs%
 echo.
@@ -64,40 +58,40 @@ del bin\off2.txt
 
 echo.
 echo - split kernel...
-bin\sfk166.exe partcopy %1 -fromto %ps% %real_ofs% %OutDir%\kernel -yes
+bin\sfk166.exe partcopy %1 -fromto %ps% %real_ofs% %~N1\kernel -yes
 echo.
 echo - extract ram_disk.gz...
-bin\sfk166.exe partcopy %1 -fromto %real_ofs% %boot_size% %OutDir%\ram_disk.gz -yes
+bin\sfk166.exe partcopy %1 -fromto %real_ofs% %boot_size% %~N1\ram_disk.gz -yes
 echo.
 echo - unpack ram_disk.gz...
-bin\7z.exe -tgzip x -y %OutDir%\ram_disk.gz -o%OutDir% >nul
+bin\7z.exe -tgzip x -y %~N1\ram_disk.gz -o%~N1 >nul
 echo.
 echo - unpack ram_disk.cpio...
-md %OutDir%\rmdisk
-cd %OutDir%
+md %~N1\rmdisk
+cd %~N1
 cd rmdisk
 %~dp0bin\cpio.exe -i <../ram_disk
 cd ..
 cd ..
 echo.
-copy %1 %OutDir%  >nul 
+copy %1 %~N1  >nul 
 echo.
 echo - Done.
 echo.
-if exist "%OutDir%/kernel" (
-	echo - %OutDir%/kernel exist.        Success.
+if exist "%~N1/kernel" (
+	echo - %~N1/kernel exist.        Success.
 ) else (
-	echo - %OutDir%/kernel do not exist. Fail.
+	echo - %~N1/kernel do not exist. Fail.
 )
-if exist "%OutDir%/rmdisk" (
-	echo - %OutDir%/rmdisk exist.        Success.
+if exist "%~N1/rmdisk" (
+	echo - %~N1/rmdisk exist.        Success.
 ) else (
-	echo - %OutDir%/rmdisk do not exist. Fail.
+	echo - %~N1/rmdisk do not exist. Fail.
 )
-if exist "%OutDir%/rmdisk/*" (
-	echo - %OutDir%/rmdisk is not empty. Success.
+if exist "%~N1/rmdisk/*" (
+	echo - %~N1/rmdisk is not empty. Success.
 ) else (
-	echo - %OutDir%/rmdisk is empty.     Fail.
+	echo - %~N1/rmdisk is empty.     Fail.
 )
 echo.
 :end

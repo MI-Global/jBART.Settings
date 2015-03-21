@@ -1,4 +1,4 @@
-@echo off
+rem @echo off
 set HomeDir=%CD%\..
 set Stock=%CD%\..\_stock
 set Miui=%CD%\..\_input_miui
@@ -24,20 +24,29 @@ echo.
 echo Start repacking Boot.img...
 echo. 
 
-call %Tools%\MTK_unpack.bat %Stock%\boot.img %Stock%\boot
+ren %Stock%\boot.img boot_stock.img
+move /Y %Stock%\boot_stock.img %Tools%\boot_stock.img
+
+cd %Tools%
+call %Tools%\MTK_unpack.bat boot_stock.img
 
 %HomeDir%\7z x -y -o%Miui% %MIUIROM% boot.img
-copy /Y %Miui%\boot.img %Tools%\
-call %Tools%\MTK_unpack.bat %Tools%\boot.img %Tools%\boot
 
-copy /Y %Stock%\boot\kernel* %Tools%\boot\
-call %Tools%\MTK_pack.bat %Tools%\boot
+ren %Miui%\boot.img boot_MIUI.img
+
+move /Y %Miui%\boot_MIUI.img %Tools%\boot_MIUI.img
+
+call %Tools%\MTK_unpack.bat boot_MIUI.img 
+
+copy /Y %Tools%\boot_stock\kernel* %Tools%\boot_MIUI\
+
+call %Tools%\MTK_pack.bat boot_MIUI
 cd %~dp0
 move /Y %Tools%\new_image.img %Stock%\boot.img
+
 del %Tools%\*.img
-rmdir /S /Q %Tools%\boot
-rmdir /S /Q %Stock%\boot
-del %Miui%\*.img
+rmdir /S /Q %Tools%\boot_stock
+rmdir /S /Q %Tools%\boot_MIUI
 
 echo Repacking Boot.img finished... 
 echo. 

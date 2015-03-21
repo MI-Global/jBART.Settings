@@ -5,10 +5,6 @@ if (%1)==() (
 	echo Select folder.
 	goto end
 )
-set OutFile=%2
-if (%2)==() (
-set OutFile=%~dp0\new_image.img
-)
 setlocal enabledelayedexpansion
 COLOR 0A
 mode con:cols=128 lines=50
@@ -41,7 +37,7 @@ rem echo.
 rem echo - pagesize %ps%
 rem echo.
 %~dp0bin\mkbootimg.exe --pagesize %ps% --kernel ../kernel --ramdisk ../ram_disk.gz -o ../new_image.img 
-copy /Y ..\new_image.img %OutFile%  >nul 
+copy ..\new_image.img %~dp0\new_image.img  >nul 
 move ..\ram_disk_old ..\ram_disk >nul
 cd ..
 cd ..
