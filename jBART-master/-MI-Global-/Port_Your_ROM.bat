@@ -43,7 +43,7 @@ copy /Y %Tools%\boot_stock\kernel* %Tools%\boot_MIUI\
 call %Tools%\MTK_pack.bat boot_MIUI
 cd %~dp0
 move /Y %Tools%\new_image.img %Stock%\boot.img
-
+pause
 del %Tools%\*.img
 rmdir /S /Q %Tools%\boot_stock
 rmdir /S /Q %Tools%\boot_MIUI

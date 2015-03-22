@@ -26,7 +26,7 @@ echo Writing to the file "%HomeDir%\data\patches\buildprop_patches.conf"
 echo.
 
 %HomeDir%\fnr --cl --dir "%HomeDir%\data\patches" --fileMask "buildprop_patches.conf" --useRegEx --find "{[\w\s \n\":.,-]*product[[\w\s \n\":.,-]*}[\s]*,[\s]*" --replace "" >nul
-%HomeDir%\fnr --cl --dir "%HomeDir%\data\patches" --fileMask "buildprop_patches.conf" --useRegEx --find "\"miui_v4\"[\s:]+\[" --replace "\"miui_v4\":[\n{\n \"Key\":\"ro.product.model\", \n \"Value\":\"%model%\", \n \"Description\":\"\", \n \"Enabled\":true \n},\n{\n \"Key\":\"ro.product.brand\", \n \"Value\":\"%brand%\", \n \"Description\":\"\", \n \"Enabled\":true \n},\n{\n \"Key\":\"ro.product.name\", \n \"Value\":\"%name%\", \n \"Description\":\"\", \n \"Enabled\":true \n}," >nul
+%HomeDir%\fnr --cl --dir "%HomeDir%\data\patches" --fileMask "buildprop_patches.conf" --useRegEx --find "\"miui_v6\"[\s:]+\[" --replace "\"miui_v6\":[\n{\n \"Key\":\"ro.product.model\", \n \"Value\":\"%model%\", \n \"Description\":\"\", \n \"Enabled\":true \n},\n{\n \"Key\":\"ro.product.brand\", \n \"Value\":\"%brand%\", \n \"Description\":\"\", \n \"Enabled\":true \n},\n{\n \"Key\":\"ro.product.name\", \n \"Value\":\"%name%\", \n \"Description\":\"\", \n \"Enabled\":true \n}," >nul
 
 del /F /Q %Stock%\build.prop
 
