@@ -39,6 +39,10 @@ move /Y %Miui%\boot_MIUI.img %Tools%\boot_MIUI.img
 call %Tools%\MTK_unpack.bat boot_MIUI.img 
 
 copy /Y %Tools%\boot_stock\kernel* %Tools%\boot_MIUI\
+copy /Y %Tools%\boot_stock\rmdisk\init.no_ssd.rc %Tools%\boot_MIUI\rmdisk\init.ssd.rc
+copy /Y %Tools%\boot_stock\rmdisk\init.ssd.rc %Tools%\boot_MIUI\rmdisk\
+copy /Y %Tools%\boot_stock\rmdisk\init.usb.rc %Tools%\boot_MIUI\rmdisk\
+copy /Y %Tools%\boot_stock\rmdisk\fstab %Tools%\boot_MIUI\rmdisk\
 
 call %Tools%\MTK_pack.bat boot_MIUI
 cd %~dp0
