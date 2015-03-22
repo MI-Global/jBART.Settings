@@ -1,7 +1,7 @@
 # NXT patches
 
 # Common patches
-include "%patches_dir%/../../_temp/repositories/patches/main/nxt/T9.ptch";
+include "%patches_dir%/../../_temp/repositories/patches/main/nxt/ContactsProvider.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/MiuiFramework.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/ThemeManager.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/Mms.ptch";
