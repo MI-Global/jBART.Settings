@@ -5,7 +5,7 @@ rem YOU CAN USE THIS BAT TO REPLACE, COPYING, REMOVING ANY FILES IN BASEROM FOLD
 rem YOU CAN SEARCH AND REPLACE ANY STRINGS IN BUILD.PROP OR OTHER CONFIG FILES USING fnr.exe.
 rem __________________________________________________________________________________________
 
-set HomeDir=%CD%
+set HomeDir=%CD%\_temp
 for /f "delims=" %%x in ('dir /od /b miui_HMNoteW_*.bzprj') do set ROM=%%x
 
 echo Patching ROM - %ROM%
