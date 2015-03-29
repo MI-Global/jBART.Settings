@@ -9,6 +9,7 @@ include "%patches_dir%/../../_temp/repositories/patches/main/nxt/InCallUI.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/Services.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/Settings.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/SecurityCenter.ptch";
+include "%patches_dir%/../../_temp/repositories/patches/main/nxt/MiuiSystemUI.ptch";
 
 # Patches for device lcsh92_wet_jb9 (all phones with MTK6592)
 include "%patches_dir%/../../_temp/repositories/patches/device/lcsh92_wet_jb9/nxt/Services.ptch";
