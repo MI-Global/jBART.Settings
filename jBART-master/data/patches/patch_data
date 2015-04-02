@@ -10,6 +10,11 @@ include "%patches_dir%/../../_temp/repositories/patches/main/nxt/Services.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/Settings.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/SecurityCenter.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/MiuiSystemUI.ptch";
+include "%patches_dir%/../../_temp/repositories/patches/main/nxt/greeshan/BatteryInfo.ptch";
+include "%patches_dir%/../../_temp/repositories/patches/main/nxt/greeshan/IconsInAdvanceSettings.ptch";
+include "%patches_dir%/../../_temp/repositories/patches/main/nxt/greeshan/LocatonQualcomm.ptch";
+include "%patches_dir%/../../_temp/repositories/patches/main/nxt/greeshan/NoSafeMediaVolume.ptch";
+include "%patches_dir%/../../_temp/repositories/patches/main/nxt/greeshan/ProxySettingsInDefPrefs.ptch";
 
 # Patches for device lcsh92_wet_jb9 (all phones with MTK6592)
 include "%patches_dir%/../../_temp/repositories/patches/device/lcsh92_wet_jb9/nxt/Services.ptch";
