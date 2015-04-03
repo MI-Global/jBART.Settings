@@ -20,7 +20,6 @@ echo %ROM%\system\build.prop
 
 rem Getting new version from build.prop file
 call:getversion %ROM%\system\build.prop "ro.build.version.incremental" "" NEWVER1
-
 goto:getverison2
 
 :getversion

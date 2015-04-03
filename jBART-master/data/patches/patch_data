@@ -10,6 +10,7 @@ include "%patches_dir%/../../_temp/repositories/patches/main/nxt/Services.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/Settings.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/SecurityCenter.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/MiuiSystemUI.ptch";
+include "%patches_dir%/../../_temp/repositories/patches/main/nxt/Framework2.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/greeshan/BatteryInfo.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/greeshan/IconsInAdvanceSettings.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/greeshan/LocatonQualcomm.ptch";
