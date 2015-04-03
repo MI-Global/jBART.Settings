@@ -20,7 +20,7 @@ echo %ROM%\system\build.prop
 
 rem Getting new version from build.prop file
 call:getversion %ROM%\system\build.prop "ro.build.version.incremental" "" NEWVER1
-goto:getverison2
+goto:getversion2
 
 :getversion
 FOR /F "eol=; eol=[ tokens=1,2* delims==" %%i in ('findstr /b /l /i %~2= %1') DO set %~4=%%~j
