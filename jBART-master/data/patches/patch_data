@@ -6,6 +6,7 @@ include "%patches_dir%/../../_temp/repositories/patches/main/nxt/MiuiFramework.p
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/ThemeManager.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/Mms.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/InCallUI.ptch";
+include "%patches_dir%/../../_temp/repositories/patches/main/nxt/MiuiKeyguard.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/Services.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/Settings.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/SecurityCenter.ptch";
