@@ -1,6 +1,7 @@
 # NXT patches
 
 # Common patches
+include "%patches_dir%/../../_temp/repositories/patches/main/nxt/MiuiVideo.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/ContactsProvider.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/MiuiFramework.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/ThemeManager.ptch";
@@ -13,6 +14,7 @@ include "%patches_dir%/../../_temp/repositories/patches/main/nxt/SecurityCenter.
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/MiuiSystemUI.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/Framework2.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/Browser.ptch";
+include "%patches_dir%/../../_temp/repositories/patches/main/nxt/MiuiGallery.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/greeshan/BatteryInfo.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/greeshan/IconsInAdvanceSettings.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/greeshan/LocatonQualcomm.ptch";
