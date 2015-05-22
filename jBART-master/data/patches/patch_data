@@ -15,6 +15,7 @@ include "%patches_dir%/../../_temp/repositories/patches/main/nxt/MiuiSystemUI.pt
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/Framework2.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/Browser.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/MiuiGallery.ptch";
+include "%patches_dir%/../../_temp/repositories/patches/main/nxt/MiuiCamera.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/greeshan/BatteryInfo.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/greeshan/IconsInAdvanceSettings.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/greeshan/LocatonQualcomm.ptch";
