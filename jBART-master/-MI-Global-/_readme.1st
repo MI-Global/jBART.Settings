@@ -1,16 +1,24 @@
+For porting MIUI from other device on the same platform:
+
 1. Place here your stock ROM.zip (for recovery) file.
 
 2. Edit file  Port_*.cfg for your platform (e.g. Port_mt6592.cfg). You can use any file name for this file.
+   If there is no such config for you platform it will be great to make it and make pull request to share.
 
 3. Run Port_Your_ROM.bat Your_ROM.zip Port_*.cfg (change Port_*.cfg to your platform config filename and Your_ROM.zip to your stock ROM's filename).
    After that you can see all nessesary files for porting in [ jBart-master\_local_repo\replace\device ] folder. You may add here all files you want to see in output ROM.
 
-4. Place input official MIUI ROM.zip in [ jBart-master\_input_miui ] forder. Better delete other zip files in this folder.
+4. Go to translation and patching MIUI.
 
-5. Run Recompile.bat without any options.
 
-6. Go have your beer.
+For translating and patching MIUI for your device:
 
-7. After recompiling the MIUI for your device will be located in [ jBart-master\output ] folder.
+1. Place input official MIUI ROM.zip in [ jBart-master\_input_miui ] forder. Better delete other zip files from this folder.
 
-8. Search the jBart's log for copiling errors.
+2. Run Recompile.bat without any options.
+
+3. Go have your beer.
+
+4. After recompiling the MIUI for your device will be located in [ jBart-master\output ] folder.
+
+5. Search the jBart's log for copiling errors.
