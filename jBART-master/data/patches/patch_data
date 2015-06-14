@@ -3,7 +3,7 @@
 # Common patches
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/MiuiVideo.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/ContactsProvider.ptch";
-include "%patches_dir%/../../_temp/repositories/patches/main/nxt/MiuiFramework.ptch";
+include "%patches_dir%/../../_temp/repositories/patches/main/nxt/miuisystem.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/ThemeManager.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/Mms.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/main/nxt/InCallUI.ptch";
@@ -27,5 +27,5 @@ include "%patches_dir%/../../_temp/repositories/patches/main/nxt/greeshan/ProxyS
 include "%patches_dir%/../../_temp/repositories/patches/device/lcsh92_wet_jb9/nxt/Services.ptch";
 include "%patches_dir%/../../_temp/repositories/patches/device/lcsh92_wet_jb9/nxt/Android.policy.ptch";
 
-# Patches for different devices
+# Patches for different devices (only local repo)
 include "%patches_dir%/../../_temp/repositories/patches/device/G4S/Settings.ptch";
